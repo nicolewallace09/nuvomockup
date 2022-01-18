@@ -26,30 +26,34 @@ const ItemList = () => {
                 {items && items.map((item) => {
                     return (
                         <div className='item-row' key={item.id}>
-                            <img 
-                                src={item.image} 
-                                alt={item.title}
-                                className='item-column-image'
-                                width='3rem'
-                                height='150rem'
-                            />
+                            <div className='item-column-image'>
+                                <img 
+                                    src={item.image} 
+                                    alt={item.title}
+                                    className='item-image'
+                                    width='90%'
+                                    height='90%'
+                                />
+                            </div>
                             <p className='item-column-title'>{item.title}</p>
                     
+                            <div className='item-column-arrow'>
                             { selectItem.id === item.id ? (   
                             <img 
                                 src={rightArrow} 
-                                className='item-column-arrow'
+                                className='item-arrow'
                                 alt='arrow pointing right' 
                                 onClick={(e) => {setSelectItem(item)}}
                                 />
                                  ) : ( 
                             <img 
                                 src={leftArrow} 
-                                className='item-column-arrow'
+                                className='item-arrow'
                                 alt='arrow pointing left' 
                                 onClick={(e) => {setSelectItem(item)}}
                                 />
                             )}
+                            </div>
                         </div>
                 )})}
             </div>

@@ -9,7 +9,7 @@ body {
 
 .row {
   display: flex;
-  margin: 5rem 10rem;
+  margin: 5rem 7rem;
 }
 
 .column {
@@ -40,21 +40,26 @@ body {
 .item-row {
   display: flex;
   align-items: center;
-  padding: 2rem;
+  margin: 5rem 0;
 }
 
-.item-column-image, .item-column-arrow {
-  width: 25%;
-  padding: 2rem;
-}
-
-.item-column-title {
-  width: 50%;
+.item-column-image {
+  width: 30%;
+  padding-left: 1rem;
 }
 
 .item-column-arrow {
   width: 10%;
-  height: 10%;
+}
+
+.item-column-title {
+  width: 60%;
+  font-size: 1.2rem;
+}
+
+.item-arrow {
+  width: 80%;
+  height: 80%;
 }
 
 /* item details */
@@ -64,7 +69,7 @@ body {
 }
 
 .item--description {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   max-width: 40rem;
 }
 
@@ -77,4 +82,46 @@ button {
   font-size: 1.2rem;
   display: flex;
   margin: 5rem 0;
+}
+
+@media only screen and (max-device-width: 768px)  {
+  .row {
+    margin: 2rem 1rem;
+  }
+
+  .item-row {
+    margin: 0.2rem;
+  }
+
+  .header--title {
+    font-size: 3rem;
+  }
+
+  .header--text {
+    font-size: 1.2rem;
+    width: 30rem;
+  }
+
+  .item-column-title {
+    font-size: 0.8rem;
+  }
+
+  .item--price {
+    font-size: 1.5rem;
+  }
+
+  .item--description {
+    font-size: 0.8rem;
+    max-width: 20rem;
+  }
+
+  .item-column-image, .item-column-arrow {
+    padding: 1rem;
+  }
+
+  button {
+    font-size: 0.8rem;
+    padding: 0.5rem 2rem;
+  }
+
 }

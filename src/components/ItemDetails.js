@@ -22,9 +22,9 @@ const ItemDetails = ({ selectItem }) => {
                         rating={rating}
                         starRatedColor="#ffc107"
                         numberOfStars={5}
-                        starDimension='2rem'
+                        starDimension='1.5rem'
                         starSpacing='0.1rem'
-                        name='item--rating'
+                        className='item--rating'
                     />
                     <span className='item--rating-count'> ({count})</span>
                     <button className='item-button' type='button'>Add to Cart</button> 
