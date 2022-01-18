@@ -22,8 +22,8 @@ const ItemDetails = ({ selectItem }) => {
                         rating={rating}
                         starRatedColor="#ffc107"
                         numberOfStars={5}
-                        starDimension='1.5rem'
-                        starSpacing='0.1rem'
+                        starDimension='1.2rem'
+                        starSpacing='0rem'
                         className='item--rating'
                     />
                     <span className='item--rating-count'> ({count})</span>

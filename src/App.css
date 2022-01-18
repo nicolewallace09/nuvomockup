@@ -44,22 +44,22 @@ body {
 }
 
 .item-column-image {
-  width: 30%;
+  width: 25%;
   padding-left: 1rem;
 }
 
 .item-column-arrow {
-  width: 10%;
+  width: 25%;
 }
 
 .item-column-title {
-  width: 60%;
+  width: 50%;
   font-size: 1.2rem;
 }
 
 .item-arrow {
-  width: 80%;
-  height: 80%;
+  width: 50%;
+  height: 50%;
 }
 
 /* item details */
@@ -86,7 +86,11 @@ button {
 
 @media only screen and (max-device-width: 768px)  {
   .row {
-    margin: 2rem 1rem;
+    margin: 2rem 0.5rem;
+  }
+
+  .column {
+    padding: 1rem;
   }
 
   .item-row {
@@ -94,24 +98,24 @@ button {
   }
 
   .header--title {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .header--text {
-    font-size: 1.2rem;
-    width: 30rem;
+    font-size: 0.9rem;
+    width: 20rem;
   }
 
   .item-column-title {
-    font-size: 0.8rem;
+    font-size: 0.5rem;
   }
 
   .item--price {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
-  .item--description {
-    font-size: 0.8rem;
+  .item--description, .item--rating-count {
+    font-size: 0.5rem;
     max-width: 20rem;
   }
 
