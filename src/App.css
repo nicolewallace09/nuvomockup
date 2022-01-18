@@ -52,15 +52,9 @@ body {
   width: 50%;
 }
 
-button {
-  background-color: #26b7d3;
-  color: #fff;
-  padding: 0.7rem 2.7rem;
-  border-radius: 0.5rem;
-  border: none;
-  font-size: 1.2rem;
-  display: flex;
-  margin: 5rem 0;
+.item-column-arrow {
+  width: 10%;
+  height: 10%;
 }
 
 /* item details */
@@ -72,4 +66,15 @@ button {
 .item--description {
   font-size: 1.5rem;
   max-width: 40rem;
+}
+
+button {
+  background-color: #26b7d3;
+  color: #fff;
+  padding: 0.7rem 2.7rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1.2rem;
+  display: flex;
+  margin: 5rem 0;
 }

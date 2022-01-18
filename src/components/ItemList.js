@@ -3,7 +3,10 @@ import axios from 'axios';
 import ItemDetails from './ItemDetails';
 
 const ItemList = () => {
+    // state for api items 
     const [items, setItems] = useState([]); 
+
+    // state for selected items 
     const [selectItem, setSelectItem] = useState({}); 
 
     useEffect(() => {
@@ -15,7 +18,7 @@ const ItemList = () => {
         .catch((err) => console.log(err)); 
     }, []); 
 
-    const rightArrow = 'https://img.icons8.com/flat-round/48/000000/arrow-right.png';
+    const rightArrow = 'https://img.icons8.com/flat-round/64/000000/arrow-right.png';
     const leftArrow = 'https://img.icons8.com/flat-round/64/000000/arrow-left.png'; 
 
     return (
@@ -32,14 +35,22 @@ const ItemList = () => {
                                 height='150rem'
                             />
                             <p className='item-column-title'>{item.title}</p>
+                    
+                            { selectItem.id === item.id ? (   
                             <img 
                                 src={rightArrow} 
                                 className='item-column-arrow'
                                 alt='arrow pointing right' 
                                 onClick={(e) => {setSelectItem(item)}}
                                 />
-
-                            { selectItem.id === item.id ? ( rightArrow ) : (leftArrow)}
+                                 ) : ( 
+                            <img 
+                                src={leftArrow} 
+                                className='item-column-arrow'
+                                alt='arrow pointing left' 
+                                onClick={(e) => {setSelectItem(item)}}
+                                />
+                            )}
                         </div>
                 )})}
             </div>

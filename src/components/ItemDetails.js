@@ -1,26 +1,40 @@
 import StarRatings from "react-star-ratings";
 
-const ItemDetails = ({ selectItem}) => {
-    if (selectItem) {
-    return (
-        <div className='item--details' key={selectItem.id}>
-            <h2 className='item--price'>${selectItem.price}</h2>
-            <p className='item--description'>{selectItem.description}</p>
-            <StarRatings
-                rating={selectItem.rating.rate}
-                starRatedColor="#ffc107"
-                numberOfStars={5}
-                starDimension='2rem'
-                starSpacing='0.1rem'
-                name='item--rating'
-            />
-            <span className='item--rating-count'> ({selectItem.rating.count})</span>
-            <button className='item-button' type='button'>Add to Cart</button>
-        </div>
-        )
-    }
+// passing selectItem object 
+const ItemDetails = ({ selectItem }) => {
+    const displayItems = () => {
+        // check is object is empty 
+        let isEmpty = Object.keys(selectItem).length === 0; 
+
+        // if not empty load data 
+        if (!isEmpty) {
+            let id = selectItem.id; 
+            let price = selectItem.price.toFixed(2); 
+            let description = selectItem.description; 
+            let rating = selectItem.rating.rate; 
+            let count = selectItem.rating.count; 
+
+            return (
+                <div className='item--details' key={id}>
+                    <h2 className='item--price'>${price}</h2>
+                    <p className='item--description'>{description}</p>
+                    <StarRatings
+                        rating={rating}
+                        starRatedColor="#ffc107"
+                        numberOfStars={5}
+                        starDimension='2rem'
+                        starSpacing='0.1rem'
+                        name='item--rating'
+                    />
+                    <span className='item--rating-count'> ({count})</span>
+                    <button className='item-button' type='button'>Add to Cart</button> 
+                </div>
+                )
+             }
+        }
     return (
         <>
+        { displayItems() }
         </>
     )
 }
