@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';  
 import axios from 'axios'; 
 import ItemDetails from './ItemDetails';
+import leftArrow from '../images/leftArrow.png';
+import rightArrow from '../images/rightArrow.png'; 
 
 const ItemList = () => {
     // state for api items 
@@ -17,9 +19,6 @@ const ItemList = () => {
         })
         .catch((err) => console.log(err)); 
     }, []); 
-
-    const rightArrow = 'https://img.icons8.com/flat-round/64/000000/arrow-right.png';
-    const leftArrow = 'https://img.icons8.com/flat-round/64/000000/arrow-left.png'; 
 
     return (
         <div className='row'>
